@@ -144,11 +144,11 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
                 <form>
-                  <form action="https://formcarry.com/s/S2thQbCqEvW" method="POST" name="Form" accept-charset="UTF-8" >
+                  <form action="https://formcarry.com/s/iR-fHZrNr0j" method="POST" accept-charset="UTF-8" >
                   <input type="text" name="field1" placeholder="Your Name" required/>
                   <input type="email" name="field2" placeholder="Email Address"  required/>
                   <textarea name="field3" placeholder="Type your Message" required></textarea>
-                  <input type="submit" value="Send" onclick="sendMail()" />
+                  <input type="submit" value="Send" />
                 </form>
              </div>
           </div>
@@ -436,25 +436,3 @@ $(window).on("load", function () {
   }, 1000);
   $(".loader-container").fadeOut(2500);
 });
-
-
-// send mail function
-
-function sendMail() {
-    var sender=Form.field2.value
-    var reciever="charanteja379@gmail.com"
-    var mesg=Form.field3.value
-    var name=Form.field1.value;
-    alert(reciever) 
-    Email.send({ 
-    Host: "smtp.gmail.com", 
-    Username: "charanteja6185", 
-    Password:"swordFish@379", 
-    To: reciever, 
-    From: sender, 
-    Subject: name,
-    Body: mesg, 
-    }).then(function (message) { 
-    alert("Mail sent successfully") 
-    }); 
-    }
