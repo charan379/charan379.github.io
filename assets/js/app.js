@@ -4,7 +4,7 @@
 
 let header = $(`
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
-<a class="navbar-brand" href="index.html">John Doe </a>
+<a class="navbar-brand" href="index.html">Charanteja Yandrapati </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
   <div id="js-hamburger" class="hamburger">
@@ -18,11 +18,22 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
+
+<!-- omit Experience  
+  <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
+-->   
+
+<!-- omit projects
    <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li>
+-->
+   
+<!-- omit research   
    <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Research</a></li>
+-->   
    <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="https://hashnode.com/" target="_blank">Blogs</a></li>
+   
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="https://movies.charantej.xyz/" target="_blank">Movies</a></li>
+   
    <li class="nav-item">
    <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
    </li>
@@ -133,11 +144,11 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
                 <form>
-                  <form action="https://formcarry.com/s/S2thQbCqEvW" method="POST" accept-charset="UTF-8" >
+                  <form action="https://formcarry.com/s/S2thQbCqEvW" method="POST" name="Form" accept-charset="UTF-8" >
                   <input type="text" name="field1" placeholder="Your Name" required/>
                   <input type="email" name="field2" placeholder="Email Address"  required/>
                   <textarea name="field3" placeholder="Type your Message" required></textarea>
-                  <input type="submit" value="Send" />
+                  <input type="submit" value="Send" onclick="sendMail()" />
                 </form>
              </div>
           </div>
@@ -148,7 +159,7 @@ let footer = $(`
     
 
     <div class="rounded-social-buttons tag">
-    <a class="social-button twitter" href="#" target="_blank">
+    <a class="social-button twitter" href="https://twitter.com/charanteja379" target="_blank">
     <!-- SVG code for twitter icon -->
     <svg class="twitter-icon-footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" enable-background="new 0 0 500 500"
@@ -206,7 +217,7 @@ let footer = $(`
     </svg>
     </a>
 
-    <a class="social-button linkedin" href="" target="_blank" >
+    <a class="social-button linkedin" href="#" target="_blank" >
     <!-- svg code for linkedin icon -->
       <svg class="linkedin-icon-footer" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
         stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
@@ -218,7 +229,7 @@ let footer = $(`
 
 
 
-    <a class="social-button instagram" href="" target="_blank" >
+    <a class="social-button instagram" href="https://www.instagram.com/charan_teja_y/" target="_blank" >
     <!-- svg code for instagram icon -->
       <svg class="instagram-icon-footer" x="0px" y="0px" viewBox="0 0 202.5 202.5"
         style="enable-background:new 0 0 202.5 202.5;">
@@ -229,7 +240,7 @@ let footer = $(`
       </svg>
     </a>
 
-    <a class="social-button github" href="#" target="_blank">
+    <a class="social-button github" href="https://github.com/charan379/" target="_blank">
     <!-- SVG code for Github icon -->
     <svg class="github-icon-footer" width="45px" height="45px" viewBox="0 0 300 300">
         <!-- body -->
@@ -425,3 +436,25 @@ $(window).on("load", function () {
   }, 1000);
   $(".loader-container").fadeOut(2500);
 });
+
+
+// send mail function
+
+function sendMail() {
+    var sender=Form.field2.value
+    var reciever="charanteja379@gmail.com"
+    var mesg=Form.field3.value
+    var name=Form.field1.value;
+    alert(reciever) 
+    Email.send({ 
+    Host: "smtp.gmail.com", 
+    Username: "charanteja6185", 
+    Password:"swordFish@379", 
+    To: reciever, 
+    From: sender, 
+    Subject: name,
+    Body: mesg, 
+    }).then(function (message) { 
+    alert("Mail sent successfully") 
+    }); 
+    }
