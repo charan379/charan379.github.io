@@ -14,7 +14,6 @@ const projects = [
     Githublink: "https://github.com/charan379/movies/",
 	cardOpenlink: "https://movies.charantej.xyz",
   },
-  
   {
     title: "GST Invoice In VBA EXCEL",
     cardImage: "assets/images/project-page/excel-vba.jpeg",

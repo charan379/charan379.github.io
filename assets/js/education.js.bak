@@ -4,7 +4,6 @@ AOS.init();
 
 const moocs = document.querySelector(".moocs");
 const moocscards = [
-/*
   {
     title: "Data Science",
     cardImage: "assets/images/education-page/coursera2.svg",
@@ -64,8 +63,7 @@ const moocscards = [
     title: "Data Structures & Algorithms",
     cardImage: "assets/images/education-page/udacity.svg",
     moocLink: "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
-  }, 
-*/
+  }, */
 ];
 
 const experience = [
