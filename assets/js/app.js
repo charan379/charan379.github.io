@@ -143,13 +143,26 @@ let footer = $(`
              <div class="form-header">
                 <h6 class="display">Get in Touch</h6>
               </div>
+			  <!--
                 <form>
-                  <form action="https://formcarry.com/s/iR-fHZrNr0j" method="POST" accept-charset="UTF-8" >
-                  <input type="text" name="field1" placeholder="Your Name" required/>
-                  <input type="email" name="field2" placeholder="Email Address"  required/>
-                  <textarea name="field3" placeholder="Type your Message" required></textarea>
-                  <input type="submit" value="Send" />
-                </form>
+				  <form action="https://formspree.io/f/mdobkzza" method="POST"  >
+                  <input type="text" name="name" placeholder="Your Name" required/>
+                  <input type="email" name="_replyto" placeholder="Email Address"  required/>
+                  <textarea name="message" placeholder="Type your Message" required></textarea>
+                  <input type="submit" value="Send" />  
+				  <button type="submit">Send</button>
+				 </form>
+				-->
+				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdobkzza" method="post">
+  <fieldset id="fs-frm-inputs">
+    
+					<input type="text" name="name" id="full-name" placeholder="Your Name" required="">
+					<input type="email" name="_replyto" id="email-address" placeholder="Email Address" required="">
+					<textarea rows="5" name="message" id="message" placeholder="Your Message." required=""></textarea>
+					<input type="hidden" name="_subject" id="email-subject" value="Message From charantej.xyz Forum">
+  </fieldset>
+  <input type="submit" value="Submit">
+			</form>
              </div>
           </div>
         </div>
