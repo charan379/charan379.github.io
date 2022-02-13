@@ -4,11 +4,20 @@ AOS.init();
 
 const moocs = document.querySelector(".moocs");
 const moocscards = [
+ 
   {
-    title: "Data Science",
-    cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/browse/data-science",
+    title: "RPA UiPath Developer Foundation",
+    cardImage: "assets/images/education-page/uipath-vector-logo/uipath-2.svg",
+    moocLink: "assets\images\education-page\Uipath_certificates\diploma_rpa_developer_foundation_Certificate_02112022065540299.pdf",
   },
+  
+  {
+    title: "RPA UiPath Developer Advanced",
+    cardImage: "assets/images/education-page/uipath-vector-logo/uipath-2.svg",
+    moocLink: "assets\images\education-page\Uipath_certificates\Diploma_of_rpa_advanced_Certificate_02132022135332486.pdf",
+  },
+  
+  /*
   {
     title: "Cryptography",
     cardImage: "assets/images/education-page/udemy.svg",
@@ -63,7 +72,10 @@ const moocscards = [
     title: "Data Structures & Algorithms",
     cardImage: "assets/images/education-page/udacity.svg",
     moocLink: "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
-  }, */
+  }, 
+  
+  */
+
 ];
 
 const experience = [
